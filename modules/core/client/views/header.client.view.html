@@ -6,7 +6,7 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</button>
-		<a data-ui-sref="home" class="navbar-brand">MEAN.JS</a>
+		<a data-ui-sref="home" class="navbar-brand">Cityguide</a>
 	</div>
 	<nav class="collapse navbar-collapse" collapse="!isCollapsed" role="navigation">
 		<ul class="nav navbar-nav" data-ng-if="menu.shouldRender(authentication.user);">
@@ -24,13 +24,13 @@
 			</li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right" data-ng-hide="authentication.user">
-			<li data-ui-sref-active="active">
+			<!-- <li data-ui-sref-active="active">
 				<a data-ui-sref="authentication.signup" target="_self">Sign Up</a>
 			</li>
 			<li class="divider-vertical"></li>
 			<li data-ui-sref-active="active">
 				<a data-ui-sref="authentication.signin" target="_self">Sign In</a>
-			</li>
+			</li> -->
 		</ul>
 		<ul class="nav navbar-nav navbar-right" data-ng-show="authentication.user">
 			<li class="dropdown">

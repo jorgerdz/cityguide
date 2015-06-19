@@ -1,0 +1,20 @@
+<section data-ng-controller="NegociosController" data-ng-init="find()">
+	<div class="page-header">
+		<h1>Negocios</h1>
+	</div>
+	<div class="list-group">
+		<a data-ng-repeat="negocio in negocios"  data-ui-sref="negocios.view({negocioId: negocio._id})" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="negocio.created | date:'mediumDate'"></span>
+				by
+				<span data-ng-bind="negocio.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="negocio.title"></h4>
+			<p class="list-group-item-text" data-ng-bind="negocio.content"></p>
+		</a>
+	</div>
+	<div class="alert alert-warning text-center" data-ng-if="negocios.$resolved && !negocios.length">
+		No negocios yet, why don't you <a data-ui-sref="negocios.create">create one</a>?
+	</div>
+</section>

@@ -1,0 +1,28 @@
+<section data-ng-controller="NegociosController" data-ng-init="findOne()">
+	<div class="page-header">
+		<h1 data-ng-bind="negocio.title"></h1>
+	</div>
+	<div class="pull-right" data-ng-show="authentication.user._id == negocio.user._id">
+		<a class="btn btn-primary" data-ui-sref="negocios.edit({negocioId: negocio._id})">
+			<i class="glyphicon glyphicon-edit"></i>
+		</a>
+		<a class="btn btn-primary" data-ng-click="remove();">
+			<i class="glyphicon glyphicon-trash"></i>
+		</a>
+		<a class="btn btn-primary" data-ng-click="remove();">
+			Promociones
+		</a>
+	</div>
+	<small>
+		<em class="text-muted">
+			Creado 
+			<span data-ng-bind="negocio.created | date:'mediumDate'"></span>
+		</em>
+	</small>
+	<p>Descripción: {{negocio.content}}</p>
+	<p>Categoría: {{negocio.category}}</p>
+	<p>URL: {{negocio.url}}</p>
+	<p>Teléfono: {{negocio.phones[0].phone}}</p>
+	<p>Dirección: {{negocio.addresses[0].address}}</p>
+	<p>Descripción: {{negocio.content}}</p>
+</section>
